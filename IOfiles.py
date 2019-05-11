@@ -1,0 +1,11 @@
+file = open('myfile.txt', 'a+')
+file.write("\nthis is a new file\n")
+file.write ('this is second line\n')
+file.write ('this is a third line\n')
+
+print(file)
+file1 = open('myfile.txt')
+print(file1.read())
+print(file1.readlines())
+print(file1.seek(0))
+print(file1.readlines())
