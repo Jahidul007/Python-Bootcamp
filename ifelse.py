@@ -11,3 +11,12 @@ if hungry == False:
     print("Feed me!")
 else:
     print("Im not hungry")
+
+location = 'Bank'
+
+if location == 'Auto Shop':
+    print("Cars are cool!")
+elif location == 'Bank':
+    print('Money is cool')
+else:
+    print("I do not know much")
