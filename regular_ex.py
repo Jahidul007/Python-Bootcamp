@@ -1,3 +1,4 @@
+import re
 def isPhoneNumber(text):
     if len(text) !=12:
         return False
@@ -26,3 +27,11 @@ for i in range(len(message)):
 if not foundNumber:
     print('Could no find any phone number')
 #print(isPhoneNumber('415-555-1234'))
+
+
+phoneNumber = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+
+mo = phoneNumber.findall(message)
+#mo = phoneNumber.search(message)
+#print(mo.group())
+print(mo)
