@@ -15,4 +15,14 @@ def isPhoneNumber(text):
         if not text[i].isdecimal():
             return False
     return True
-print(isPhoneNumber('415-555-1234'))
+message = 'call me 415-555-1234 tomorrow, or at 415-555-9999 for my office line'
+
+foundNumber = False
+for i in range(len(message)):
+    chunk = message[i:i+12]
+    if isPhoneNumber(chunk):
+        print('Phone number found: ' + chunk)
+        foundNumber = True
+if not foundNumber:
+    print('Could no find any phone number')
+#print(isPhoneNumber('415-555-1234'))
