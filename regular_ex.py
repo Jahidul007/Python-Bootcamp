@@ -37,3 +37,5 @@ mo = phoneNumber.findall(message)
 print(mo)
 phoneNumber = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 print(phoneNumber.search(message).group(2))
+
+batRegex = re.compile(r'Bat()wo?man')
