@@ -62,6 +62,13 @@ phn = phoneRegex.findall('aksdflkjslkdf 444-444-4444 444-444-6666 lksdflkjlsakdf
 print(phn)
 
 
+# vowel regex
+
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+vr = vowelRegex.findall('Hamid hasan is a good boy but not talent.')
+
+print(vr)
+
 
 
 
