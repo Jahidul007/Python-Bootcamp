@@ -69,7 +69,19 @@ vr = vowelRegex.findall('Hamid hasan is a good boy but not talent.')
 
 print(vr)
 
+beginsWithHelloRegex = re.compile(r'^Hello')
+helloRegex = beginsWithHelloRegex.findall('Hello! jahid, How are you?')
 
+print(helloRegex)
 
+endsWithByeRegex = re.compile(r'Bye$')
+helloRegex = endsWithByeRegex.findall('Hello! jahid, Good Bye')
 
+print(helloRegex)
+
+# begins and ends pattern
+
+beginsEndsRegex = re.compile(r'^\d+$')
+bE = beginsEndsRegex.findall('2986087560985')
+print(bE)
 
