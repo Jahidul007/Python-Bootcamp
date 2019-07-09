@@ -44,5 +44,7 @@ mo = batRegex.search('Batmobile lost a wheel')
 #mo = batRegex.search('Batmotor lost a wheel')
 print(mo.group(1))
 
+batRegex = re.compile(r'Bat(wo)')
+
 
 
