@@ -44,7 +44,17 @@ mo = batRegex.search('Batmobile lost a wheel')
 #mo = batRegex.search('Batmotor lost a wheel')
 print(mo.group(1))
 
-batRegex = re.compile(r'Bat(wo)')
+batRegex = re.compile(r'Bat(wo)?man')
+mo = batRegex.search('the adventures of Batman')
+
+print(mo.group())
+
+# exactly repeating
+
+haRegex = re.compile(r'(Ha){3}')
+
+ha = haRegex.search('jakjhg  jdfhjh HaHaHa')
+print(ha.group())
 
 
 
