@@ -85,3 +85,9 @@ beginsEndsRegex = re.compile(r'^\d+$')
 bE = beginsEndsRegex.findall('2986087560985')
 print(bE)
 
+
+namesRegex = re.compile(r'Agent \w+')
+
+nr = namesRegex.findall('Agent alice gave the secret documents to Agent Bob')
+nr = namesRegex.sub('REDACTED','Agent alice gave the secret documents to Agent Bob')
+print(nr)
