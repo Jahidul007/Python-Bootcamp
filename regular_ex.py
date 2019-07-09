@@ -41,4 +41,6 @@ print(phoneNumber.search(message).group(2))
 batRegex = re.compile(r'Bat(mobile|man|copter|bat)')
 
 mo = batRegex.search('Batmobile lost a wheel')
+#mo = batRegex.search('Batmotor lost a wheel')
 print(mo.group())
+
