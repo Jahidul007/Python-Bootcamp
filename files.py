@@ -76,5 +76,9 @@ shefFile = shelve.open('mydata')
 
 print(list(shefFile.keys()))
 print(list(shefFile.values()))
+shefFile.close()
+
+import shutil
+shutil.copy("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new2.txt", "C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file\\new2.txt")
 
 
