@@ -15,7 +15,20 @@ print(os.getcwd())
 
 # relative file path current working file
 
+# single dots(.) stands for this directory or this folder
 
+# double dots(..) stands for parent folder
+
+# exists or isfile isdir
+print(os.path.exists('c:\\users'))
+
+# size
+
+print(os.path.getsize('c:\\windows'))
+
+# os.listdir('c:\\')
+
+print(os.makedirs('C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file'))
 
 
 
