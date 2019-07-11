@@ -9,4 +9,15 @@ print(path)
 # current working directory
 print(os.getcwd())
 
+# absolute file path and relative file path
+
+# absolute file start with root file path
+
+# relative file path current working file
+
+
+
+
+
+
 
