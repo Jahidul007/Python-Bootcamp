@@ -27,8 +27,36 @@ print(os.path.exists('c:\\users'))
 print(os.path.getsize('c:\\windows'))
 
 # os.listdir('c:\\')
+# create new file
+# print(os.makedirs('C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file'))
 
-print(os.makedirs('C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file'))
+# reading from file and writing into file
+
+hello  = open("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new.txt")
+print(hello.read())
+hello.close()
+hello  = open("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new.txt")
+content = hello.read()
+print(content)
+hello.close()
+hello  = open("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new.txt")
+
+print(hello.readlines())
+hello.close()
+# w for write mode and
+# a for append mode
+hello  = open("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new2.txt", 'w')
+hello.write('heloooooooooo!!!!!!!!!')
+hello.write('heloooooooooo!!!!!!!!!')
+hello.write('heloooooooooo!!!!!!!!!')
+
+hello.close()
+
+bacon  = open("becon.txt", 'w')
+
+bacon.write('Bacon is not a vegetable.')
+bacon.close()
+
 
 
 
