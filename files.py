@@ -79,6 +79,15 @@ print(list(shefFile.values()))
 shefFile.close()
 
 import shutil
-shutil.copy("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new2.txt", "C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file\\new2.txt")
+#shutil.copy("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new2.txt", "C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file\\new2.txt")
 
+# remove empty directory
+# os.rmdir("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file")
+
+# remove folder and all of it's content
+#shutil.rmtree("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\file")
+
+import send2trash
+
+send2trash.send2trash("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new2.txt")
 
