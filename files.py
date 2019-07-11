@@ -47,7 +47,7 @@ hello.close()
 # a for append mode
 hello  = open("C:\\Users\\Asus\\Desktop\\Python\\Python-Bootcamp\\new2.txt", 'w')
 hello.write('heloooooooooo!!!!!!!!!')
-hello.write('heloooooooooo!!!!!!!!!')
+
 hello.write('heloooooooooo!!!!!!!!!')
 
 hello.close()
@@ -57,8 +57,24 @@ bacon  = open("becon.txt", 'w')
 bacon.write('Bacon is not a vegetable.')
 bacon.close()
 
+bacon  = open("becon.txt", 'a')
+bacon.write('Bacon is delicious')
+bacon.close()
 
+# shelve
 
+import shelve
+shefFile = shelve.open('mydata')
+shefFile['cats'] = ['zophie', 'pooka','simon', 'Fat-hill', 'Cleo']
+shefFile.close()
 
+shefFile = shelve.open('mydata')
+print(shefFile['cats'])
+shefFile.close()
+
+shefFile = shelve.open('mydata')
+
+print(list(shefFile.keys()))
+print(list(shefFile.values()))
 
 
