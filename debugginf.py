@@ -1,5 +1,5 @@
 import logging
-logging.basicConfig(level=logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='myLog.txt', level=logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
 
                                                   
 """
@@ -28,10 +28,10 @@ def boxPrint(symbol, width, height):
 
 
 boxPrint('*', 10, 4)
-
+# There are five log levels 1.debug(lowest), 2.info, 3.warning, 4.error, 5.critical(Highest)
 # disable logging module
 
-logging.disable(logging.CRITICAL)
+#logging.disable(logging.CRITICAL)
 
 logging.debug('Start of program')
 def factorial(n):
