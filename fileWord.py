@@ -1,6 +1,7 @@
 import pandas as pd
+import docx
 import os
 
-variable = pd.read_csv(r"C:\Users\Asus\Desktop\new.docx")
-vh = variable.head()
-print(vh)
+variable = docx.Document(r"C:\Users\Asus\Desktop\new.docx")
+
+print(variable)
