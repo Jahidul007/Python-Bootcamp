@@ -4,4 +4,8 @@ conn.ehlo()
 conn.starttls()
 conn.ehlo()
 
-conn.login('your', '680680717')
+conn.login('your_email', 'your_password')
+
+conn.sendmail('your maiil', 'receiver_mail', 'type your message')
+
+conn.quit()
