@@ -29,7 +29,7 @@ def find_features(document):
         features[w] = (w in words)
 
     return features
-#print((find_features(movie_reviews.words('neg/Book.txt'))))
+#print((find_features(movie_reviews.words('neg/file.txt'))))
 featuresets = [(find_features(rev), category) for (rev, category) in documents]
 
 # set that we'll train our classifier with
@@ -77,8 +77,3 @@ print("LinearSVC_classifier accuracy percent:", (nltk.classify.accuracy(LinearSV
 NuSVC_classifier = SklearnClassifier(NuSVC())
 NuSVC_classifier.train(training_set)
 print("NuSVC_classifier accuracy percent:", (nltk.classify.accuracy(NuSVC_classifier, testing_set))*100)
-
-
-
-
-
