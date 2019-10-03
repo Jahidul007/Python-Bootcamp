@@ -1,8 +1,9 @@
+import random
 class MyClass(object):
     def call_function(self):
-        print('calling "fuction" method with instance: ')
+        self.random_val = random.randint(1, 10)
 
 
 this_object = MyClass()
 this_object.call_function()
-print;
+print(this_object.random_val);
