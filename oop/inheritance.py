@@ -38,20 +38,3 @@ c.swatstring()
 d.eat("dog food")
 c.eat("cat food")
 # d.swatstring()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
