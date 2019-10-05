@@ -4,7 +4,7 @@ class InstanceCounter(object):
     def __init__(self, val):
         self.val = self.filterint(val)
         InstanceCounter.count += 1
-
+# @classmethod
     @staticmethod
     def filterint(value):
         if not isinstance(value, int):
