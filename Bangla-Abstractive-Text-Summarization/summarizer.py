@@ -20,7 +20,7 @@ from sklearn.model_selection import train_test_split
 pd.set_option("display.max_colwidth", 200)
 warnings.filterwarnings("ignore")
 
-trainData = pd.read_csv("data.csv")
+trainData = pd.read_excel("data.xlsx")
 
 print("Data files read")
 
@@ -29,11 +29,11 @@ def text_cleaner(text):
     return (" ".join(tokens)).strip()
 
 cleaned_text = []
-for t in trainData['text']:
+for t in trainData['Text']:
     cleaned_text.append(text_cleaner(str(t)))
     
 cleaned_summary = []
-for t in trainData[' summary']:
+for t in trainData['Summary']:
     cleaned_summary.append(text_cleaner(str(t)))
 
 
