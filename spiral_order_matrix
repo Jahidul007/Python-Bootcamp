@@ -1,0 +1,55 @@
+def spiral_order(matrix):
+    linear_arr = []
+    m = len(matrix)
+    if m == 0:
+        return linear_arr
+    n = len(matrix[0])
+    print(m)
+    print(n)
+
+    direction = 0
+
+    left = 0
+    right = m - 1
+    top = 0
+    bottom = n - 1
+    while (top <= bottom and left <= right):
+        if direction == 0:
+            for i in range(left, right + 1):
+                linear_arr.append(matrix[top][i])
+            top += 1
+            direction = 1
+        if direction == 1:
+            for i in range(top, bottom + 1):
+                linear_arr.append(matrix[i][right])
+            right -= 1
+            direction = 2
+        if direction == 2:
+            for i in range(right, left - 1, -1):
+                linear_arr.append(matrix[bottom][i])
+            bottom -= 1
+            direction = 3
+        if direction == 3:
+            for i in range(bottom, top - 1, - 1):
+                linear_arr.append(matrix[i][left])
+            left += 1
+            direction = 0
+
+    return linear_arr
+
+
+mat1 = [
+    [1, 2, 3],
+    [8, 9, 4],
+    [7, 6, 5]
+]
+mat = [
+    [1, 2, 3, 4, 5],
+    [12, 13, 14, 5, 5],
+    [11, 16, 15, 6, 5],
+    [10, 9, 8, 7, 5],
+    [1, 2, 3, 4, 5]
+]
+
+print('Output Pattern: ', spiral_order(mat))
+print('done')
