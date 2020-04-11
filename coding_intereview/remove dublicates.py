@@ -11,6 +11,21 @@ def remove_duplicates(nums):
     return len(unique_nums)
 
 
+class Solution:
+    def removeDuplicates(self, nums):
+        n = len(nums)
+        if n < 2:
+            return len(nums)
+
+        current_index = 1
+
+        for i in range(1, n):
+            if (nums[i] != nums[i - 1]):
+                nums[current_index] = nums[i]
+                current_index += 1
+        return current_index
+
+
 def remove_duplicates1(nums):
     unique_nums = list(set(nums))
     unique_nums.sort()
