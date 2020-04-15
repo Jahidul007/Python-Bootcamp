@@ -14,4 +14,4 @@ class Solution:
             while node.next and node.val == node.next.val:
                 node.next = node.next.next
             node = node.next
-        return node
+        return head

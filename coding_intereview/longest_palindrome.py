@@ -26,4 +26,4 @@ class Solution:
         return s[i + 1:][::-1] + s
 
 
-print(Solution().shortestPalindrome('adam'))
+print(Solution().shortestPalindrome('babad'))
