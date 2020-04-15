@@ -1,29 +1,23 @@
 class Solution:
-    def shortestPalindrome(self, s: str) -> str:
+    def longestPalindrome(self, s: str) -> str:
 
-        # KMP Algorithm
-        def getPrefix(pattern):
-            prefix = [-1] * len(pattern)
-            j = -1
-            for i in range(1, len(pattern)):
-                while j > -1 and pattern[j + 1] != pattern[i]:
-                    j = prefix[j]
-                if pattern[j + 1] == pattern[i]:
-                    j += 1
-                prefix[i] = j
-            return prefix
+        longestStr = ''
+        for i in range(len(s)):
+            temp = self.helper(s, i, i)
+            if len(temp) > len(longestStr):
+                longestStr = temp
 
-        if not s:
-            return s
+            temp = self.helper(s, i, i + 1)
+            if len(temp) > len(longestStr):
+                longestStr = temp
+        return longestStr
 
-        A = s + s[::-1]
-        prefix = getPrefix(A)
-        i = prefix[-1]
-
-        while i >= len(s):
-            i = prefix[i]
-
-        return s[i + 1:][::-1] + s
+    def helper(self, s, start, end):
+        while start >= 0 and end < len(s) and s[start] == s[end]:
+            start -= 1
+            end += 1
+        return s[start + 1:end]
 
 
-print(Solution().shortestPalindrome('babad'))
+
+print(Solution().longestPalindrome('babad'))
