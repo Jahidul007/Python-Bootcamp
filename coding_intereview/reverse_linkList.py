@@ -16,4 +16,3 @@ class Solution:
             head = nextNode
         return newhead
 
-print(Solution().reverseList([1,2,3,4,5]))
