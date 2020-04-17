@@ -1,15 +1,14 @@
 def threeSum1(nums):
     n = len(nums)
-    sum = 0
-    f = True
+    nums.sort()
     found = []
     for i in range(0, n - 2):
         for j in range(i + 1, n - 1):
             for k in range(j + 1, n):
                 if nums[i] + nums[j] + nums[k] == 0:
                     found.append([nums[i], nums[j], nums[k]])
-
-    return found
+    unique = set(found)
+    return unique
 
 
 def threeSum(nums):
@@ -38,9 +37,10 @@ def threeSum(nums):
                 j += 1
         while i < n - 3 and nums[i] == nums[i + 1]:
             i += 1
+        i +=1
     return result
 
 
 nums = [-1, 0, 1, 2, -1, -4]
 
-print(threeSum(nums))
+print(threeSum1(nums))
