@@ -7,8 +7,8 @@ def threeSum1(nums):
             for k in range(j + 1, n):
                 if nums[i] + nums[j] + nums[k] == 0:
                     found.append([nums[i], nums[j], nums[k]])
-    unique = set(found)
-    return unique
+
+    return found
 
 
 def threeSum(nums):
