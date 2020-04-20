@@ -7,10 +7,9 @@ class Solution:
             if item in "(+-*/":
                 stack.append(item)
             elif item in ")":
-                last_item =stack.pop()
+                last_item = stack.pop()
                 if last_item == "(":
                     return True
                 while "(" != stack.pop():
                     continue
         return False
-
