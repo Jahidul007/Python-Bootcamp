@@ -16,3 +16,5 @@ class Solution:
 
 
         return "".join(rows)
+
+print(Solution().convert("PAYPALISHIRING", 3))
