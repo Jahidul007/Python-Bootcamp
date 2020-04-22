@@ -1,11 +1,5 @@
 class Solution(object):
     def combine(self, n, k):
-        """
-        :type n: int
-        :type k: int
-        :rtype: List[List[int]]
-        """
-
         def recurse(i, li):
             if len(li) == k:
                 result.append([x for x in li])
@@ -19,3 +13,6 @@ class Solution(object):
         result = []
         recurse(1, [])
         return result
+
+
+print(Solution().combine(4, 2))
