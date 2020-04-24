@@ -1,6 +1,6 @@
 class Solution(object):
     def letterCombinations(self, digits):
-        """
+        """7
         :type digits: str
         :rtype: List[str]
         """
