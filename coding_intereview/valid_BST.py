@@ -32,3 +32,29 @@ class Solution:
             if right_max > max_v:
                 max_v = right_max
         return max_v
+
+    """
+    # Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def isValidBST(self, root: TreeNode) -> bool:
+        nodes = []
+        def inorder(root):
+            if root is None:
+                return 
+            inorder(root.left)
+            nodes.append(root.val)
+            inorder(root.right)
+            
+        
+        inorder(root)
+        for i in range(len(nodes)-1):
+            if nodes[i]>=nodes[i+1]:
+                return False
+        return True
+    """
