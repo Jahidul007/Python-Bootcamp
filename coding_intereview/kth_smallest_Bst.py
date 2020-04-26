@@ -5,10 +5,14 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
         nodes = []
-# use this method without memory consideration
+        self.inorder(root)
+        return nodes[k - 1]
+
+        # use this method without memory consideration
         def inorder(root):
             if root is None:
                 return
@@ -17,20 +21,21 @@ class Solution:
             inorder(root.right)
             print(nodes)
 
-        inorder(root)
 
-        return nodes[k - 1]
 
-# use this for O(K) memory
-        def inorder(root):
+
+
+        # use this for O(K) memory
+        def inorder1(root):
             nonlocal k
             if root is None:
                 return
-            val = inorder(root.left)
+            val = inorder1(root.left)
             if val:
                 return val
             if k == 1:
                 return root.val
-            k -=1
-            return inorder(root.right)
-        return inorder(root)
+            k -= 1
+            return inorder1(root.right)
+
+        return inorder1(root)
