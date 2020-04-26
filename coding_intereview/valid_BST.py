@@ -5,6 +5,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         if root is None:
@@ -14,7 +15,7 @@ class Solution:
             if max_value >= root.val:
                 return False
         if root.right:
-            min_value = self.find_max(root.right)
+            min_value = self.find_min(root.right)
             if min_value <= root.val:
                 return False
         valid_left = self.isValidBST(root.left)
@@ -32,6 +33,18 @@ class Solution:
             if right_max > max_v:
                 max_v = right_max
         return max_v
+
+    def find_min(self, root):
+        min_v = root.val
+        if root.left:
+            left_min = self.find_min(root.left)
+            if left_min <= min_v:
+                min_v = left_min
+        if root.right:
+            right_max = self.find_min(root.right)
+            if right_max <= min_v:
+                min_v = right_max
+        return min_v
 
     """
     # Definition for a binary tree node.
