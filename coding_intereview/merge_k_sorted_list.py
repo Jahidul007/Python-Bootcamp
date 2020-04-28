@@ -1,34 +1,34 @@
-from heapq import heappush, heappop
-
-
-class ListNode:
+import heapq
+class ListNode(object):
     def __init__(self, x):
-        self.value = x
+        self.val = x
         self.next = None
 
+class Solution:
+    # @param a list of ListNode
+    # @return a ListNode
+    def mergeKLists(self, lists):
+        nodes = []
+        for l in lists:
+            while(l):
+                nodes.append(l)
+                l = l.next
 
-"""
-linked_lists হচ্ছে লিঙ্কড লিস্টের লিস্ট (বা অ্যারে)। এটিতে প্রতিটি লিঙ্কড লিস্টের হেড নোড আছে।
-"""
+        if(len(nodes) == 0):
+            return None
+        nodes = sorted(nodes, key=lambda x: x.val)
 
+        s = nodes[0]
 
-def merge_k_lists(linked_lists):
-    h = []  # heap-এ আমরা (নোডের মান, নোড)-এভাবে টাপল রাখব।
-    for node in linked_lists:
-        if node:  # কোনো কোনো লিঙ্কড লিস্ট ফাঁকা থাকতে পারে, সেক্ষেত্রে node হবে None
-            heappush(h, (node.value, node))
+        for n in nodes[1:]:
+            s.next = n
+            s = s.next
 
-    head = ListNode(0)
-    cur = head
+        return nodes[0]
+if __name__ == "__main__":
+    list1 = ListNode(1)
+    list1.next = ListNode(3)
+    list2 = ListNode(2)
+    list2.next = ListNode(4)
 
-    while len(h):
-        # heappop() একটি টাপল রিটার্ন করবে যার প্রথম উপাদানটি হচ্ছে নোডের মান আর দ্বিতীয়টি হচ্ছে নোড
-        # আমাদের দরকার কেবল নোড, তাই আমরা ইনডেক্স [1] ব্যবহার করছি
-        cur.next = heappop(h)[1]
-
-        cur = cur.next
-
-        if cur.next:  # পরের নোড যদি থাকে, সেটিকে হিপে রাখতে হবে
-            heappush(h, (cur.next.value, cur.next))
-
-    return head.next
+    print(Solution().mergeKLists([list1, list2]))
