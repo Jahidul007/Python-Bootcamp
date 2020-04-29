@@ -29,4 +29,4 @@ def subUnsort(A):
             break
     return [start,end]
  
-print(subUnsort([5,6,1,2,4,7]))
+print(subUnsort([2, 6, 4, 8, 10, 9, 15]))

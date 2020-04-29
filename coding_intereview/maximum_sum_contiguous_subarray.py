@@ -11,4 +11,4 @@ def max_sum(arr):
     return max
 
 
-print(max_sum([-2, -1, 2, 1, 3, -5, 4]))
+print(max_sum([2, 6, 4, 8, 10, 9, 15]))
