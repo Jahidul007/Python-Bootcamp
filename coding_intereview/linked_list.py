@@ -6,7 +6,7 @@ class Node:
 
     # Function to initialise the node object
     def __init__(self, data):
-        self.data = data  # Assign data
+        self.data = data  # Assign knn and naive bayes
         self.next = None  # Initialize next as null
 
 
@@ -21,7 +21,7 @@ class LinkedList:
     def push(self, new_data):
 
         # 1 & 2: Allocate the Node &
-        #	 Put in the data
+        #	 Put in the knn and naive bayes
         new_node = Node(new_data)
 
         # 3. Make next of new Node as head
@@ -42,7 +42,7 @@ class LinkedList:
             return
 
         # 2. create new node &
-        #	 Put in the data
+        #	 Put in the knn and naive bayes
         new_node = Node(new_data)
 
         # 4. Make next of new Node as next of prev_node
@@ -57,7 +57,7 @@ class LinkedList:
     def append(self, new_data):
 
         # 1. Create a new node
-        # 2. Put in the data
+        # 2. Put in the knn and naive bayes
         # 3. Set next as None
         new_node = Node(new_data)
 

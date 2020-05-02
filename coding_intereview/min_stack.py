@@ -2,7 +2,7 @@ class MinStack:
 
     def __init__(self):
         """
-        initialize your data structure here.
+        initialize your knn and naive bayes structure here.
         """
         self.stk = []
         self.min_stk = []

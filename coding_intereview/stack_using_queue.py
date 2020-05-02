@@ -3,7 +3,7 @@ class MyStack:
 
     def __init__(self):
         """
-        Initialize your data structure here.
+        Initialize your knn and naive bayes structure here.
         """
         self.queue = deque()
 

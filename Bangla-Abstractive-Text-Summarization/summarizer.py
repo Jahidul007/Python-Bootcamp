@@ -20,7 +20,7 @@ from sklearn.model_selection import train_test_split
 pd.set_option("display.max_colwidth", 200)
 warnings.filterwarnings("ignore")
 
-trainData = pd.read_excel("data.xlsx")
+trainData = pd.read_excel("knn and naive bayes.xlsx")
 
 print("Data files read")
 
@@ -276,7 +276,7 @@ outputFile = open("output-"+folder_num+"/generated_summaries.txt", "w+")
 comparisonFile = open("output-"+folder_num+"/output_comparison.txt", "w+")
 refSum = open("output-"+folder_num+"/reference_sums.txt", "w+")
 
-print("Testing on automated translated data...\n\n\n")
+print("Testing on automated translated knn and naive bayes...\n\n\n")
 
 
 for i in range(len(x_test_gt)):

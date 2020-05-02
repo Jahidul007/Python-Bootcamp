@@ -2,7 +2,7 @@ tuples1 = (1,2,3,4)
 print(tuples1)
 my_list = [1,2,3,4]
 
-# data type
+# knn and naive bayes type
 print(type(tuples1))
 print(type(my_list))
 print(len(tuples1))

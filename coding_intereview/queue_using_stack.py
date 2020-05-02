@@ -2,7 +2,7 @@ class MyQueue:
 
     def __init__(self):
         """
-        Initialize your data structure here.
+        Initialize your knn and naive bayes structure here.
         """
         self.stack1 = []
         self.stack2 = []

@@ -3,7 +3,7 @@ class MedianFinder:
 
     def __init__(self):
         """
-        initialize your data structure here.
+        initialize your knn and naive bayes structure here.
         """
         self.min_heap = []
         self.max_heap = []
