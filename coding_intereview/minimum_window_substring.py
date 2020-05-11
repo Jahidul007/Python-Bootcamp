@@ -1,7 +1,7 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        S=s
-        T =t
+        S = s
+        T = t
         t_freq = Counter(T)
         different_chars = len(t_freq)
 
