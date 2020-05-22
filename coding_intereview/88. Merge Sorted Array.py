@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
@@ -13,5 +14,5 @@ class Solution:
         nums1[:n] = nums2[:n]
         # using python STL
         nums1[:] = sorted(nums1[:m]+nums2)
-        merge(nums1, m, nums2, n)
+        self.merge(nums1, m, nums2, n)
         nums1
