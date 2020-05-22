@@ -12,5 +12,5 @@ class Solution:
                 j -= 1
             if numbers[i] + numbers[j] < target:
                 i += 1
-
+        # eval() is used for basic calculation
         return [i + 1, j + 1]
