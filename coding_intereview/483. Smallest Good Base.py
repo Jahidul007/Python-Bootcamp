@@ -7,8 +7,11 @@ class Solution:
             while low <= high:
                 mid = (low + high) // 2
                 res = (mid ** m - 1) // (mid - 1)
-                if res == n: return str(mid)
-                elif res < n: low = mid + 1
-                else: high = mid - 1
+                if res == n:
+                    return str(mid)
+                elif res < n:
+                    low = mid + 1
+                else:
+                    high = mid - 1
             m -= 1
         return str(n)
