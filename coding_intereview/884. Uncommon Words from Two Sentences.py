@@ -2,7 +2,7 @@ class Solution:
     def uncommonFromSentences(self, A: str, B: str) -> List[str]:
         list_A = A.split(' ')
         list_B = B.split(' ')
-        ans= []
+        ans = []
         dict_ = {}
         for i in list_A:
             if i not in dict_:
@@ -14,7 +14,7 @@ class Solution:
                 dict_[i] = True
             else:
                 dict_[i] = False
-        for k,v in dict_.items():
+        for k, v in dict_.items():
             if v == True:
                 ans.append(k)
         return ans
