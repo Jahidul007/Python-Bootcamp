@@ -1,10 +1,8 @@
-A = sorted(A, key = lambda x: abs(x))
-       d = {}
-       eliminate = 0
-       for i, num in enumerate(A):
-           if not num & 1 and num//2 in d and d[num//2] > 0:
-               d[num//2] -= 1
-               eliminate += 2
-           else:
-               d[num] = 1 if num not in d else d[num] + 1
-       return (eliminate == len(A))
+class Solution:
+    def canReorderDoubled(self, A: List[int]) -> bool:
+        cnt = collections.Counter(A)
+        for x in sorted(cnt, key=abs):
+            if cnt[x] > cnt[2 * x]:
+                return 0
+            cnt[2 * x] -= cnt[x]
+        return 1
