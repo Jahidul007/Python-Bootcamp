@@ -8,6 +8,7 @@ def bfs(graph, root):
     while queue:
 
         # Dequeue a vertex from queue
+        
         vertex = queue.popleft()
         print(str(vertex) + " ", end="")
 
