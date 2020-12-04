@@ -1,22 +1,25 @@
 class Apple:
+    def __init__(self):
+        print("Apple Created")
     pass
 
     _name = "jahid"
 
-    def _detail(self, name, amount):
+    def __detail(self, name, amount):
         print(name, amount + amount)
+    def det(self):
+        self.__detail('Nepali', 12)
 
 
 class Banana:
     pass
 
     def _Det(self):
-        ne = Apple._detail(self, 'banana', 23)
-        print(ne)
+        ne = Apple.__detail(self, 'banana', 23)
+        return ne
 
 
 ne = Apple()
-ne._detail('Nepali', 12)
-print(ne._name)
+ne.det()
 bn = Banana()
-bn._Det();
+bn._Det()
