@@ -1,0 +1,20 @@
+class Solution:
+    def decrypt(self, code: List[int], k: int) -> List[int]:
+        result = []
+        a = code.copy()
+        counter = 0
+        if k==0:
+            return [0]*len(code)
+        elif k>0:
+            a += code
+            for i in range(len(code)):
+                result.append(sum(a[i+1:i+k+1]))
+        else:
+            a = code+a
+            k =abs(k)
+            for i in range(len(code),len(a)):
+                result.append(sum(a[i-k:i]))
+
+        return result
+            
+        
